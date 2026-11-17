@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": false,
+    "types": ["bun-types"],
+    "baseUrl": ".",
+    "paths": {
+      "@shred/shared": ["packages/shared/src/index.ts"],
+      "@shred/shared/*": ["packages/shared/src/*"]
+    }
+  },
+  "include": [
+    "packages/shared/src/**/*.ts",
+    "packages/kms/src/**/*.ts",
+    "packages/app/src/**/*.ts",
+    "packages/tools/src/**/*.ts",
+    "packages/**/tests/**/*.ts"
+  ]
+}

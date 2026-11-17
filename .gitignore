@@ -16,3 +16,10 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# 运行时数据：密钥库、业务库、备份、凭证、验证报告
+data/
+# 前端构建产物
+packages/admin/dist/
+# Bun 日志
+*.log

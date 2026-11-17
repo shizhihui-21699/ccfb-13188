@@ -1,0 +1,32 @@
+{
+  "name": "shred-platform",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Crypto-shredding platform: per-user DEK envelope encryption with verifiable key destruction",
+  "workspaces": [
+    "packages/shared",
+    "packages/kms",
+    "packages/app",
+    "packages/tools",
+    "packages/admin"
+  ],
+  "scripts": {
+    "dev:kms": "bun run packages/kms/src/index.ts",
+    "dev:app": "bun run packages/app/src/index.ts",
+    "dev:admin": "bun run --cwd packages/admin dev",
+    "seed": "bun run packages/tools/src/cli.ts seed",
+    "migrate": "bun run packages/tools/src/cli.ts migrate",
+    "backup": "bun run packages/tools/src/cli.ts backup",
+    "verify": "bun run packages/tools/src/cli.ts verify",
+    "rekey-backup": "bun run packages/tools/src/cli.ts rekey-backup",
+    "demo": "bun run packages/tools/src/cli.ts demo",
+    "test": "bun test packages/shared packages/kms",
+    "test:e2e": "bun test packages/tools/tests/e2e.test.ts",
+    "typecheck": "tsc -p tsconfig.backend.json",
+    "build:admin": "bun run --cwd packages/admin build"
+  },
+  "devDependencies": {
+    "bun-types": "^1.4.4",
+    "typescript": "^5.9.2"
+  }
+}

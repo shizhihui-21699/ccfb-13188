@@ -1,0 +1,10 @@
+{
+  "name": "@shred/kms",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@shred/shared": "workspace:*",
+    "hono": "^4.6.14"
+  }
+}
